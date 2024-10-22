@@ -1,0 +1,29 @@
+*.pem
+# VSCode settings
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+override.tf
+override.tf.json
+terraform.tfvars
+terraform.tfvars.json
+
+local.env.tfvars
+.terraform.lock.hcl

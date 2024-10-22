@@ -1,0 +1,14 @@
+- name: aws
+  apps:
+    - AWS IAM Identity Center
+  permissions:
+    - division: Workforce
+      department: Support
+      access: ReadOnly
+      userids:
+        - Daniel
+    - division: CustomerIdentity
+      department: Development
+      access: Admin
+      userids:
+        - Jessica

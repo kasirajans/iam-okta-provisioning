@@ -1,0 +1,11 @@
+first_name,last_name,cost_center,division,department,user_type,role
+Jessica,Johnson,1003,CustomerIdentity,Engineering,Employee,Developer
+Emily,Taylor,1001,Workforce,Support,Employee,Developer
+Daniel,Martinez,1003,Workforce,Support,Contractor,Audit
+Sarah,Martinez,1003,CustomerIdentity,Development,Contractor,Developer
+Sarah,Davis,1001,Workforce,Support,Employee,Admin
+Emma,Smith,1001,Workforce,Development,Employee,Developer
+Sophia,Garcia,1004,CustomerIdentity,Engineering,Contractor,Developer
+James,Taylor,1003,CustomerIdentity,Support,Employee,HR
+Emma,Garcia,1003,CustomerIdentity,Support,Employee,Admin
+Daniel,Brown,1002,Workforce,Sales,Employee,Audit

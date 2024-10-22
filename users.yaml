@@ -1,0 +1,64 @@
+- first_name: Kasi
+  last_name: Ramya
+  cost_center: '1003'
+  division: CustomerIdentity
+  departments:
+  - Development
+  user_type: Employee
+  role: Audit
+- first_name: Ramya
+  last_name: Kasi
+  cost_center: '1002'
+  division: Workforce
+  departments:
+  - Sales
+  user_type: Contractor
+  role: HR
+- first_name: Bibek
+  last_name: Taylor
+  cost_center: '1002'
+  division: CustomerIdentity
+  departments:
+  - Sales
+  user_type: Employee
+  role: HR
+- first_name: Jessica
+  last_name: Smith
+  cost_center: '1002'
+  division: Workforce
+  departments:
+  - Sales
+  user_type: Contractor
+  role: Developer
+- first_name: Emma
+  last_name: Johnson
+  cost_center: '1003'
+  division: CustomerIdentity
+  departments:
+  - Development
+  user_type: Employee
+  role: Audit
+- first_name: James
+  last_name: Taylor
+  cost_center: '1004'
+  division: CustomerIdentity
+  departments:
+  - Support
+  user_type: Contractor
+  role: Admin
+- first_name: Emily
+  last_name: Garcia
+  cost_center: '1004'
+  division: CustomerIdentity
+  departments:
+  - Engineering
+  user_type: Contractor
+  role: Admin
+- first_name: David
+  last_name: Johnson
+  cost_center: '1002'
+  division: Workforce
+  departments:
+  - Sales
+  user_type: Employee
+  role: HR
