@@ -24,7 +24,7 @@ locals {
   ])
 
   # Get a list of userids for each group
-  # user_list = { for group in local.app_permissions : group.name => group.userids }
+  user_list = { for group in local.app_permissions : group.name => group.userids }
   
   # Flatten the list of apps for each group
   # app_list = flatten([

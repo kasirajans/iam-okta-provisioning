@@ -23,3 +23,11 @@ output "user_passwords" {
   } }
   sensitive = true
 }
+
+# output "debug_user_list" {
+#   value = local.user_list
+# }
+
+# output "debug_okta_users" {
+#   value = okta_user.users
+# }
