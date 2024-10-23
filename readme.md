@@ -3,14 +3,13 @@
 This project automates the provisioning of AWS resources and user management using Terraform and Okta. It also integrates with Google Workspace for user authentication and management.
 
 ## Prerequisites
-
 Before you begin, ensure you have met the following requirements:
 
 - You have an Okta account with the necessary permissions to create and manage users and groups.
 - You have a Google Workspace account with admin privileges.
-- You have Terraform installed on your local machine.
-- You have Python installed on your local machine.
-
+- Python 3.x
+- Terraform
+- Required Python libraries (listed in `requirements.txt`)
 ## Setup
 
 ### 1. Clone the Repository

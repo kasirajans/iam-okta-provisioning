@@ -1,14 +1,36 @@
 - name: aws
   apps:
-    - AWS IAM Identity Center
+  - AWS IAM Identity Center
   permissions:
-    - division: Workforce
-      department: Support
-      access: ReadOnly
-      userids:
-        - Daniel
-    - division: CustomerIdentity
-      department: Development
-      access: Admin
-      userids:
-        - Jessica
+  - access: Audit
+    department: Development
+    division: CustomerIdentity
+    userids:
+    - Kasi
+    - Emma
+  - access: HR
+    department: Sales
+    division: Workforce
+    userids:
+    - Ramya
+    - David
+  - access: HR
+    department: Sales
+    division: CustomerIdentity
+    userids:
+    - Bibek
+  - access: Developer
+    department: Sales
+    division: Workforce
+    userids:
+    - Jessica
+  - access: Admin
+    department: Support
+    division: CustomerIdentity
+    userids:
+    - James
+  - access: Admin
+    department: Engineering
+    division: CustomerIdentity
+    userids:
+    - Emily

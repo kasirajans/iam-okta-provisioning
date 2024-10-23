@@ -12,16 +12,16 @@ locals {
   # Ensure no group has duplicate permission names
   # has_duplicates = length([for group in local.validate_permissions : group if group.duplicate_permissions]) > 0
 
-  # app_permissions = flatten([
-  #   for group in local.groups : [
-  #     for permission in group.permissions : {
-  #       name    = "App-${group.name}-${permission.name}"
-  #       desc    = permission.access
-  #       permission = permission.name
-  #       userids = permission.userids
-  #     }
-  #   ]
-  # ])
+  app_permissions = flatten([
+    for group in local.groups : [
+      for permission in group.permissions : {
+        name    = "App_${group.name}_${permission.division}_${permission.department}_${permission.access}"
+        desc    = "App permission for ${group.name} - ${permission.division} - ${permission.department} - ${permission.access}"
+        permission = "${group.name}_${permission.division}_${permission.department}_${permission.access}"
+        userids = permission.userids
+      }
+    ]
+  ])
 
   # Get a list of userids for each group
   # user_list = { for group in local.app_permissions : group.name => group.userids }

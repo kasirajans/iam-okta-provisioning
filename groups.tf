@@ -1,9 +1,8 @@
-# resource "okta_group" "this" {
-#   for_each    = { for group in local.app_permissions : "App_${group.name}_${group.division}_${group.department}_${group.access}" => group }
-#   name        = each.value.name
-#   description = "Group for ${each.value.name}"
-
-# }
+resource "okta_group" "this" {
+  for_each    = { for group in local.app_permissions : group.name => group }
+  name        = each.value.name
+  description = "Group for ${each.value.name}"
+}
 # Assign users to groups
 # resource "okta_group_memberships" "this" {
 #   for_each = { for group in okta_group.this : group.name => group }
