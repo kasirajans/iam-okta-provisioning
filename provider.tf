@@ -20,4 +20,5 @@ provider "okta" {
     client_id   = var.client_id
     private_key = file(var.private_key)
     scopes      = var.scopes
+    max_api_capacity = 50
 }
