@@ -24,10 +24,15 @@ output "user_passwords" {
   sensitive = true
 }
 
-output "okta_group_names" {
-  value = [for group in okta_group.app : group.name if length(regex("App_aws", group.name)) > 0]
+# output "App_okta_group_names" {
+#   value = [for group in okta_group.app : group.name if length(regex("App_aws", group.name)) > 0]
+# }
+
+output "AWS_okta_group_names" {
+  value = [for group in okta_group.app : group.name if can(regex("AWS_GF", group.name))]
 }
-# output "debug_user_list" {
+
+# output "debug_user_list" {                                                                                                                                   
 #   value = local.user_list
 # }
 

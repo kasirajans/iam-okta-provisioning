@@ -1,10 +1,10 @@
 resource "okta_group" "app" {
-  for_each    = { for group in local.app_permissions : group.name => group }
+  for_each    = { for group in local.group_user_list : group.name => group }
   name        = each.value.name
-  description = "Group for ${each.value.name}"
+  description = "${each.value.desc}"
 }
 
-# Assign users to groups
+# # Assign users to groups
 resource "okta_group_memberships" "this" {
   for_each = { for group in okta_group.app : group.name => group }
 
@@ -13,13 +13,14 @@ resource "okta_group_memberships" "this" {
                 contains(keys(okta_user.users), userid) ? okta_user.users[userid].id : null])
 }
 
+# # Create groups for user types Employe and Contractor
 resource "okta_group" "user_type" {
   for_each = { for group_name in local.unique_user_types : group_name => group_name }
   name        = each.value
   description = "Group for ${each.value}"
 }
 
-# resource "okta_group_rule" "example" {
+# resource "okta_group_rule" "user_type_Employe" {
 #   name   = "example"
 #   status = "ACTIVE"
 #   group_assignments = [
