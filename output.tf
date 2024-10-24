@@ -24,6 +24,9 @@ output "user_passwords" {
   sensitive = true
 }
 
+output "okta_group_names" {
+  value = [for group in okta_group.app : group.name if length(regex("App_aws", group.name)) > 0]
+}
 # output "debug_user_list" {
 #   value = local.user_list
 # }

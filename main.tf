@@ -34,7 +34,7 @@ locals {
           app_name   = app
           group_name = "App_${group.name}_${permission.division}_${permission.department}_${permission.access}"
           priority   = index(group.permissions, permission) + 1
-          group_id   = okta_group.this["App_${group.name}_${permission.division}_${permission.department}_${permission.access}"].id
+          group_id   = okta_group.app["App_${group.name}_${permission.division}_${permission.department}_${permission.access}"].id
         }
       ]
     ]
@@ -43,9 +43,9 @@ locals {
   # Get a list of unique app names
   unique_app_names = tolist(distinct([for app in local.app_list : app.app_name]))
 
-  # Get a list of unique user_type group
-   user_types = [for user in local.users : user.user_type]
-   unique_user_types = distinct(local.user_types)
+  # Get a list of unique user types
+  user_types = [for user in local.users : user.user_type]
+  unique_user_types = distinct(local.user_types) 
 }
 
 
